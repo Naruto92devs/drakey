@@ -1,0 +1,1385 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    cursor: default;
+}
+
+@font-face{
+    font-family: fake;
+    src: url(../fonts/fake_serif/Fake\ Serif.ttf);
+}
+
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+    font-size: 1vw;
+    line-height: 1.3vw;
+    color: #FFFFFF;
+}
+
+
+h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6vw;
+    line-height: 6vw;
+    /* or 80px */
+    text-align: center;
+    letter-spacing: -0.04em;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+
+p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1vw;
+    line-height: 1.4vw;
+    /* or 28px */
+    letter-spacing: 0.02em;
+    /* Mono/White */
+    color: #FFFFFF;
+}
+
+body{
+    background: #0D171F;
+}
+
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar-toggle span {
+    display: block;
+    width: 7vw;
+    height: 1.5vw;
+    margin: 0.7vw;
+    background: linear-gradient(271.36deg, #FE3939 50.01%, #FFFF14 72.39%);
+    border-radius: 50px;
+    transition: all 0.5s;
+}
+
+.navbar-toggle span:nth-child(2) {
+    width: 5vw;
+}
+
+/* -------------------------------------------Navbar Management------------------
+-------------------- */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.header .navbar {
+    padding: 0.5vw 4vw;
+    width: 100%;
+    height: auto;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0D171F;
+}
+
+.header .navbar .left-side-menu {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+}
+
+.header .navbar .left-side-menu a {
+    font-family: 'Bebas Neue', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.5vw;
+    line-height: 4vw;
+    /* or 59px */
+    letter-spacing: -0.04em;
+    text-transform: capitalize;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+
+.header .navbar .left-side-menu a img {
+    width: 30%;
+    cursor: pointer;
+}
+
+.center-menu {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2vw;
+}
+
+.center-menu a {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.center-menu a .effect {
+    width: 1vw;
+    height: 1vw;
+}
+
+.header .center-menu a li {
+    padding: 0.5vw 0.7vw;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-size: 1.2vw;
+    line-height: 2vw;
+    color: #FFF;
+    transition: all 0s;
+}
+
+.header .center-menu a li:hover {
+    color: #000000;
+    background: #93E9FF;
+    border-radius: 1vw;
+    position: relative;
+    top: -0.2vw;
+}
+
+.header .center-menu .nav-links {
+    display: flex;
+    gap: 1vw;
+    margin-left: auto;
+}
+
+.header .center-menu .nav-links a .links {
+    width: 2.5vw;
+    padding: 0.1vw;
+    /* background: linear-gradient(180deg, #FDEF19 0%, #E60012 100%); */
+    border-radius: 0.2vw;
+    transition: all 0s;
+}
+
+.header .center-menu .nav-links a .links:hover {
+    background: #93E9FF;
+    position: relative;
+    top: -0.2vw;
+}
+
+/* ------------------------------hero-section------------------------
+-------------------- */
+
+.hero-section {
+    width: 100%;
+    height: 70vw;
+    background-image: url(../images/hero-section.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    padding-top: 20vw;
+}
+
+.hero-section h1 {
+    font-family: fake;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10vw;
+    line-height: 10vw;
+    text-align: center;
+    color: #FFF3E3;
+    margin-bottom: 37vw;
+}
+
+.hero-section .scrol p {
+    color: #817499;
+    text-align: center;
+    font-family: 'Georama', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1vw;
+    line-height: 1.3vw;
+    /* identical to box height, or 21px */
+    letter-spacing: 0.02em;
+    color: #838383;
+}
+
+/* ---------------------------------About US-----------------
+------------ */
+
+.about {
+    width: 100%;
+    height: auto;
+    padding: 5vw 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about .top {
+    width: 10%;
+}
+
+.about .content {
+    width: 100%;
+    display: flex;
+}
+
+.about .content .left {
+    width: 50%;
+    height: auto;
+}
+
+.about .content .left img {
+    width: 90%;
+}
+
+.about .content .right {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    padding-top: 3%;
+}
+
+.about .content .right p{
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 1.2vw;
+    line-height: 1.5vw;
+    /* or 31px */
+    letter-spacing: -0.02em;
+}
+
+.about .content .right .btn-group {
+    display: flex;
+    gap: 0.5vw;
+}
+
+.about .content .right .btn-group a img {
+    width: 10vw;
+}
+
+/* -----------------------------------tokenomics--------------
+-------------------*/
+
+.tokenomics {
+    width: 100%;
+    height: 80vw;
+    padding: 5vw 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../images/token\ bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+.tokenomics .top {
+    width: 10%;
+}
+
+.tokenomics h2 {
+    margin-bottom: 7vw;
+}
+
+.tokenomics h3 {
+    font-family: fake;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4vw;
+    line-height: 5vw;
+    text-align: center;
+    color: #FFF3E3;
+}
+
+.tokenomics h4 {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.7vw;
+    line-height: 3vw;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.tokenomics img {
+    width: 70%;
+}
+
+/* -----------------------------------Chat gpt--------------
+-------------------*/
+
+.chat {
+    width: 100%;
+    height: auto;
+    padding: 5vw 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat .top {
+    width: 10%;
+}
+
+.chat h2 {
+    margin-bottom: 5vw;
+}
+
+.chat img {
+    width: 60%;
+}
+
+/* -----------------------------------Born--------------
+-------------------*/
+
+.born {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.born h2 {
+    font-family: fake;
+}
+
+.born .content {
+    padding: 0vw 10vw;
+    width: 100%;
+    height: 70vw;
+    padding: 0vw 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../images/born\ bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+.born .content img {
+    width: 50%;
+}
+
+.born .content .container {
+    margin-top: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.born .content .container .img {
+    width: 20%;
+    height: auto;
+}
+
+.born .content .container .img img {
+    width: 100%;
+}
+
+.born .content .container .img1 {
+    padding-top: 10vw;
+}
+
+.born .content .container .img3 {
+    padding-top: 5vw;
+}
+
+.born .content .container .img4 {
+    padding-top: 2vw;
+}
+
+/* -----------------------------------Roadmap--------------
+-------------------*/
+
+.roadmap {
+    width: 100%;
+    height: auto;
+    padding: 5vw 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.roadmap .top {
+    width: 10%;
+}
+
+.roadmap .content {
+    margin-top: 5vw;
+    width: 100%;
+    display: flex;
+}
+
+.roadmap .content .left {
+    width: 50%;
+    height: auto;
+    display: flex;
+}
+
+.roadmap .content .left img {
+    width: 100%;
+}
+
+
+
+.roadmap .content .right {
+    width: 50%;
+    height: auto;
+}
+
+.roadmap .content .right img {
+    width: 100%;
+    height: auto;
+}
+
+/* -------------------------------------footer----------
+----------- */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .navbar {
+    padding: 0.5vw 4vw;
+    width: 100%;
+    height: auto;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0D171F;
+}
+
+.footer .navbar .left-side-menu {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer .navbar .left-side-menu a {
+    font-family: 'Bebas Neue', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.5vw;
+    line-height: 4vw;
+    /* or 59px */
+    letter-spacing: -0.04em;
+    text-transform: capitalize;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+
+.footer .navbar .left-side-menu a img {
+    width: 30%;
+    cursor: pointer;
+}
+
+.footer .center-menu {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2vw;
+}
+
+.footer .center-menu a {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.footer .center-menu a .effect {
+    width: 1vw;
+    height: 1vw;
+}
+
+.footer .center-menu a li {
+    padding: 0.5vw 0.7vw;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-size: 1.2vw;
+    line-height: 2vw;
+    color: #FFF;
+    transition: all 0s;
+}
+
+.footer .center-menu a li:hover {
+    color: #000000;
+    background: #93E9FF;
+    border-radius: 1vw;
+    position: relative;
+    top: -0.2vw;
+}
+
+.footer .center-menu .nav-links {
+    display: flex;
+    gap: 1vw;
+    margin-left: auto;
+}
+
+.footer .center-menu .nav-links a .links {
+    width: 2.5vw;
+    padding: 0.1vw;
+    /* background: linear-gradient(180deg, #FDEF19 0%, #E60012 100%); */
+    border-radius: 0.2vw;
+    transition: all 0s;
+}
+
+.footer .center-menu .nav-links a .links:hover {
+    background: #93E9FF;
+    position: relative;
+    top: -0.2vw;
+}
+
+.footer .bottom-footer {
+    width: 100%;
+    padding: 2vw 0;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 2vw;
+    /* or 129% */
+    text-align: center;
+    /* blue-gray/300 */
+    color: #CBD5E1;
+    border-top: 2px solid #1E293B;
+}
+
+
+
+
+/* --------------------------------website Responsive--------------
+-------------------- */
+
+/* ----------------------------@ 1280px--------
+------- */
+
+@media (max-width: 1280px) {
+
+    /* -------------------------navbar 1280px--------------------------
+    ----------------------- */
+    
+    
+    .header .navbar .left-side-menu a img {
+        width: 40%;
+    }
+    
+    .center-menu {
+        gap: 1.5vw;
+    }
+    
+    .center-menu a {
+        gap: 1vw;
+    }
+    
+    .header .center-menu .nav-links {
+        gap: 1.5vw;
+    }
+    
+    .header .center-menu .nav-links a .links {
+        width: 3vw;
+        padding: 0.1vw;
+    }
+    
+    .header .center-menu a li{
+        font-size: 1.2vw;
+    }
+
+}
+
+/* ----------------------------@ 980px--------
+------- */
+
+@media (max-width: 980px) {
+
+.header .navbar {
+    padding-top: 1vw;
+    padding-bottom: 0.3vw;
+}
+
+.header .navbar .left-side-menu {
+    width: 30%;
+}
+
+.header .navbar .left-side-menu a img {
+    width: 40%;
+    height: auto;
+    position: relative;
+}
+
+.header .navbar .left-side-menu a {
+    font-size: 7vw;
+    font-weight: 800;
+    gap: 1vw;
+}
+
+.header .center-menu a li {
+    font-size: 3vw;
+    padding: 2vw;
+    font-weight: 600;
+}
+
+.header .center-menu a li:hover {
+    border-radius: 0vw;
+    background: transparent;
+    top: 0;
+    transform: scale(1.1);
+}
+
+.header .center-menu .tg:hover li{
+    color: #000000;
+}
+
+.header .center-menu {
+    display: flex;
+    width: 40%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2vw;
+    padding-top: 5vw;
+    display: none;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 9.3vw;
+    right: 0;
+    background-color: #0D171F;
+    z-index: -1;
+    /* border-left: 2px solid rgba(255, 255, 20, 0.5);
+    border-top: 2px solid rgba(255, 255, 20, 0.5); */
+}
+
+.header .center-menu.active {
+    display: flex;
+}
+
+.header .center-menu .tg {
+    background-color: #0D171F;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: all 0s;
+}
+
+
+.header .center-menu .tg:hover {
+    background: #FDEF19;
+}
+
+.header .center-menu .nav-links {
+    display: flex;
+    gap: 2.5vw;
+    margin-left: 0;
+}
+
+.header .center-menu .nav-links a .links {
+    width: 7vw;
+    padding: 0.2vw;
+    border-radius: 0.5vw;
+    transition: all 0s;
+}
+
+.navbar-toggle span {
+    display: block;
+    width: 5vw;
+    height: 1vw;
+    margin: 0.7vw;
+    background: linear-gradient(271.36deg, #FFFF14 50.01%, #FFFF14 72.39%);
+    border-radius: 50px;
+    transition: all 0.5s;
+}
+
+.navbar-toggle span:nth-child(2) {
+    width: 3.5vw;
+}
+
+.navbar-toggle {
+    display: block;
+  }
+  
+  .navbar-toggle.active span:nth-child(1) {
+    transition-delay: 0.1s;
+    transform: rotate(45deg) translate(1.3vw, 1.3vw);
+  }
+  
+  .navbar-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .navbar-toggle.active span:nth-child(3) {
+    transition-delay: 0.1s;
+    transform: rotate(-45deg) translate(0vw, 0vw);
+    position: relative;
+    top: -1.6vw;
+  }
+
+  /* ------------------------------hero-section------------------------
+-------------------- */
+
+.hero-section h1 {
+    font-size: 12vw;
+    margin-bottom: 35vw;
+}
+
+.hero-section .scrol p {
+    font-size: 1.5vw;
+    line-height: 1.7vw;
+}
+
+/* ---------------------------------About US-----------------
+------------ */
+
+
+.about .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about .content .left {
+    width: 80%;
+    height: auto;
+}
+
+.about .content .left img {
+    width: 100%;
+}
+
+.about .content .right {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+    padding-top: 3%;
+}
+
+.about .content .right p{
+    font-size: 2vw;
+    line-height: 2.2vw;
+    text-align: center;
+}
+
+.about .content .right .btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.about .content .right .btn-group a img {
+    width: 15vw;
+}
+
+/* -----------------------------------tokenomics--------------
+-------------------*/
+
+.tokenomics {
+    width: 100%;
+    height: auto;
+    padding: 10vw 0vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tokenomics h2 {
+    margin-bottom: 7vw;
+}
+
+.tokenomics h3 {
+    font-family: fake;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 5vw;
+    line-height: 5vw;
+    text-align: center;
+    color: #FFF3E3;
+}
+
+.tokenomics h4 {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2vw;
+    line-height: 3vw;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.tokenomics img {
+    width: 80%;
+}
+
+/* -----------------------------------Chat gpt--------------
+-------------------*/
+
+.chat {
+    width: 100%;
+    height: auto;
+    padding: 0vw 10vw 10vw 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat .top {
+    width: 10%;
+}
+
+.chat h2 {
+    margin-bottom: 8vw;
+}
+
+.chat img {
+    width: 80%;
+}
+
+/* -----------------------------------Born--------------
+-------------------*/
+
+.born {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.born h2 {
+    font-family: fake;
+    font-family: 10vw;
+}
+
+.born .content {
+    padding: 0vw 10vw;
+    width: 100%;
+    height: auto;
+    padding: 0vw 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../images/born\ bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+.born .content img {
+    width: 50%;
+}
+
+.born .content .container {
+    margin-top: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3.33%;
+}
+
+.born .content .container .img {
+    width: 30%;
+    height: auto;
+}
+
+.born .content .container .img img {
+    width: 100%;
+}
+
+.born .content .container .img4 {
+    padding-top: 0vw;
+}
+
+/* -----------------------------------Roadmap--------------
+-------------------*/
+
+.roadmap {
+    width: 100%;
+    height: auto;
+    padding: 5vw 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.roadmap .top {
+    width: 10%;
+}
+
+.roadmap .content {
+    margin-top: 5vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vw;
+}
+
+.roadmap .content .left {
+    width: 80%;
+    height: auto;
+    display: flex;
+}
+
+.roadmap .content .left img {
+    width: 100%;
+}
+
+
+
+.roadmap .content .right {
+    width: 80%;
+    height: auto;
+}
+
+.roadmap .content .right img {
+    width: 100%;
+    height: auto;
+}
+
+/* -------------------------------------footer----------
+----------- */
+
+.footer .navbar .left-side-menu a {
+    font-size: 4vw;
+    line-height: 4vw;
+    gap: 1vw;
+}
+
+.footer .center-menu {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2vw;
+}
+
+.footer .center-menu a {
+    gap: 0.7vw;
+}
+
+
+.footer .center-menu a li {
+    font-size: 1.5vw;
+}
+
+.footer .center-menu .nav-links {
+    display: flex;
+    gap: 1vw;
+    margin-left: auto;
+}
+
+.footer .center-menu .nav-links a .links {
+    width: 4vw;
+}
+
+.footer .bottom-footer {
+    font-size: 1.5vw;
+    line-height: 2vw;
+}
+
+}
+
+/* ----------------------------@ 600px--------
+------- */
+
+@media (max-width: 600px) {
+
+    h2 {
+        font-size: 8vw;
+        line-height: 8vw;
+    }
+
+    .header .navbar {
+        padding-top: 3vw;
+        padding-bottom: 1vw;
+    }
+    
+    .header .navbar .left-side-menu {
+        width: 30%
+    }
+    
+    .header .navbar .left-side-menu a img {
+        width: 40%;
+        height: auto;
+        position: relative;
+        
+    }
+    
+    .header .center-menu a li {
+        font-size: 3.5vw;
+        padding: 3.5vw;
+    }
+    
+    .header .center-menu {
+        display: flex;
+        width: 50%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 5vw;
+        padding-top: 5vw;
+        display: none;
+        transition: all 1s ease-in-out;
+        z-index: -1;
+        top: 12vw;
+    }
+
+    .header .center-menu.active {
+        display: flex;
+    }
+
+    .header .center-menu .nav-links {
+        display: flex;
+        gap: 3vw;
+    }
+    
+    .header .center-menu .nav-links a .links {
+        width: 10vw;
+        padding: 0.2vw;
+        border-radius: 0.5vw;
+        transition: all 0s;
+    }
+
+    .navbar-toggle span {
+        display: block;
+        width: 7vw;
+        height: 1.5vw;
+        margin: 0.7vw;
+        background: linear-gradient(271.36deg, #FFFF14 50.01%, #FFFF14 72.39%);
+        border-radius: 50px;
+        transition: all 0.5s;
+    }
+    
+    .navbar-toggle span:nth-child(2) {
+        width: 5vw;
+    }
+    
+    .navbar-toggle {
+        display: block;
+      }
+      
+      .navbar-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(1.3vw, 1.3vw);
+      }
+      
+      .navbar-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .navbar-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(0vw, 0vw);
+        position: relative;
+        top: -2.5vw;
+      }
+
+ /* ------------------------------hero-section------------------------
+-------------------- */
+
+.hero-section h1 {
+    font-size: 12vw;
+    margin-bottom: 35vw;
+}
+
+.hero-section .scrol p {
+    font-size: 2vw;
+    line-height: 2.2vw;
+}
+
+/* ---------------------------------About US-----------------
+------------ */
+
+
+.about .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about .content .left {
+    width: 80%;
+    height: auto;
+}
+
+.about .content .left img {
+    width: 100%;
+}
+
+.about .content .right {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+    padding-top: 3%;
+}
+
+.about .content .right p{
+    font-size: 3vw;
+    line-height: 3.5vw;
+    text-align: center;
+}
+
+.about .content .right .btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.about .content .right .btn-group a img {
+    width: 20vw;
+}
+
+/* -----------------------------------tokenomics--------------
+-------------------*/
+
+.tokenomics {
+    width: 100%;
+    height: auto;
+    padding: 10vw 0vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tokenomics h2 {
+    margin-bottom: 10vw;
+}
+
+.tokenomics h3 {
+    font-family: fake;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 7vw;
+    line-height: 6vw;
+    text-align: center;
+    color: #FFF3E3;
+}
+
+.tokenomics h4 {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.5vw;
+    line-height: 4vw;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.tokenomics img {
+    width: 80%;
+}
+
+/* -----------------------------------Chat gpt--------------
+-------------------*/
+
+.chat {
+    width: 100%;
+    height: auto;
+    padding: 0vw 10vw 10vw 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat .top {
+    width: 10%;
+}
+
+.chat h2 {
+    margin-bottom: 10vw;
+}
+
+.chat img {
+    width: 80%;
+}
+
+/* -----------------------------------Born--------------
+-------------------*/
+
+.born {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.born h2 {
+    font-family: fake;
+    font-size: 10vw;
+}
+
+.born .content {
+    padding: 0vw 10vw;
+    width: 100%;
+    height: auto;
+    padding: 0vw 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../images/born\ bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+.born .content img {
+    width: 50%;
+}
+
+.born .content .container {
+    margin-top: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0%;
+}
+
+.born .content .container .img {
+    width: 50%;
+    height: auto;
+}
+
+.born .content .container .img img {
+    width: 100%;
+}
+
+.born .content .container .img4 {
+    padding-top: 0vw;
+}
+
+/* -----------------------------------Roadmap--------------
+-------------------*/
+
+.roadmap {
+    width: 100%;
+    height: auto;
+    padding: 5vw 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.roadmap .top {
+    width: 10%;
+}
+
+.roadmap .content {
+    margin-top: 5vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vw;
+}
+
+.roadmap .content .left {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.roadmap .content .left img {
+    width: 100%;
+}
+
+
+
+.roadmap .content .right {
+    width: 80%;
+    height: auto;
+}
+
+.roadmap .content .right img {
+    width: 100%;
+    height: auto;
+}
+
+/* -------------------------------------footer----------
+----------- */
+
+.footer .navbar .left-side-menu a {
+    font-size: 4vw;
+    line-height: 4vw;
+    gap: 1vw;
+}
+
+.footer .navbar .left-side-menu a img {
+    width: 40%;
+}
+
+.footer .center-menu {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2vw;
+}
+
+.footer .center-menu a {
+    gap: 0.7vw;
+}
+
+
+.footer .center-menu a li {
+    font-size: 1.7vw;
+}
+
+.footer .center-menu .nav-links {
+    display: flex;
+    gap: 1vw;
+    margin-left: auto;
+}
+
+.footer .center-menu .nav-links a .links {
+    width: 4vw;
+}
+
+.footer .bottom-footer {
+    font-size: 2.5vw;
+    line-height: 4vw;
+}
+
+}
